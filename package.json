@@ -12,5 +12,7 @@
   "devDependencies": {
     "jest": "20.0.1",
     "uglifyjs-webpack-plugin": "0.4.3"
+  },
+  "dependencies": {
   }
 }
