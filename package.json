@@ -14,5 +14,6 @@
     "uglifyjs-webpack-plugin": "0.4.3"
   },
   "dependencies": {
+    "lodash.mergewith": "^4.6.0"
   }
 }
