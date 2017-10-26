@@ -1,3 +1,6 @@
+# 0.4.0
+- Added DevServer Support
+
 # 0.3.0
 - Added node function
 
