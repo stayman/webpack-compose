@@ -1,3 +1,7 @@
+#0.5.0
+- composeIf will now take arrays in `iftrue` and `iffalse` to allow multiple items to be associated with the same condition
+- css method wrapping the ExtractTextPlugin defined
+
 # 0.4.0
 - Added DevServer Support
 
