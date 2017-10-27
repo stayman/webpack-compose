@@ -44,7 +44,50 @@ describe('css', () => {
   })
 
   test('loader options are defined', () => {
-    const result = css(true)(/\.css/, ['css-loader', 'sass-loader'], 'app.css', {}, {include: 'foo/bar', exclude: 'baz/quux'})
+    const result = css(true)(/\.css/, ['css-loader', 'sass-loader'], 'app.css', {}, {include: 'foo/bar', exclude: 'baz/quux'})()
+    expect(result).toMatchObject({
+      module: {
+        rules: [
+          {
+            include: 'foo/bar',
+            exclude: 'baz/quux'
+          }
+        ]
+      }
+    })
+  })
 
+  test('if an object is passed concat in dev mode', () => {
+    const result = css(false)(/\.css/, {fallback: 'foo-loader', use: ['bar-loader']})()
+
+    expect(result).toMatchObject({
+      module: {
+        rules: [
+          {
+            use: [
+              'foo-loader',
+              'bar-loader'
+            ]
+          }
+        ]
+      }
+    })
+  })
+
+  test('if an object is passed, do not create array in prod mode', () => {
+    const result = css(true)(/\.css/, {fallback: 'foo-loader', use: ['bar-loader']})()
+
+    expect(result).toMatchObject({
+      module: {
+        rules: [
+          {
+            use: ExtractTextPlugin.extract({
+              fallback: 'foo-loader',
+              use: ['bar-loader']
+            })
+          }
+        ]
+      }
+    })
   })
 })
