@@ -1,3 +1,6 @@
+# 0.6.1
+- Fix environment handling in css helper
+
 # 0.6.0
 - Add a `modules` command
 
