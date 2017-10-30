@@ -1,0 +1,23 @@
+{
+  "name": "webpack-compose-css",
+  "version": "0.6.1",
+  "description": "a helper to build css configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack-compose": "^0.6.1"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "webpack": "^3.8.1",
+    "extract-text-webpack-plugin": "^3.0.2"
+  },
+  "peerDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
+    "webpack": "^3.8.1"
+  }
+}
