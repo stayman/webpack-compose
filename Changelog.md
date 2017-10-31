@@ -1,3 +1,5 @@
+# 0.7.0
+- Target added
 # 0.6.1
 - Fix environment handling in css helper
 
